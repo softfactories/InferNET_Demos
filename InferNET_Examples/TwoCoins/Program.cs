@@ -13,6 +13,10 @@ namespace sf.infernet.demos
 
             InferenceEngine engine = new InferenceEngine();
 
+#if SHOW_MODEL
+            engine.ShowFactorGraph = true;
+#endif
+
             Console.WriteLine("Die Wahrscheinlichkeit - beide Münzen zeigen Köpfe: "
                 + engine.Infer(beideMünzen));
         }
