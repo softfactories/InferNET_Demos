@@ -20,7 +20,10 @@ namespace sf.infernet.demos
             
             // Inferenz-Engine (IE) erstellen
             InferenceEngine engine = new InferenceEngine();
-  
+#if SHOW_MODEL
+            engine.ShowFactorGraph = true; // PM visualisieren
+#endif
+
             // Inferenz ausführen
             var ergebnis = engine.Infer<Bernoulli>(beideMünzenWurf);
             double beideMünzenZeigenKöpfe = ergebnis.GetProbTrue();
