@@ -9,8 +9,8 @@ Get the Infer.NET Framework via [Infer.NET](https://dotnet.github.io/infer/) or 
 
 ## The Experiments List
 
-1. Experiment N°1 - Tossing two coins. Probability both are heads?
-2. Experiment N°1 - Tossing two coins. Observation - both coins are newer heads. Probability first coin is head?
+1. Experiment N°1 - Tossing two coins. How big is the probability both are heads?
+2. Experiment N°2 - Throwing two dices. Observation - both dices never get 6 points. How big is the probability first dice gets 6 point?
 
 ### Build and Run the Experiments
  1. Starting in the folder where you clone the repository
