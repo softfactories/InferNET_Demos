@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCoins", "TwoCoins\TwoCoins.csproj", "{F3EF3C0D-5250-482A-81D8-010FA3FA2A50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoCubesExperiment", "TwoCubesExperiment\TwoCubesExperiment.csproj", "{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoDices", "TwoCubesExperiment\TwoDices.csproj", "{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
