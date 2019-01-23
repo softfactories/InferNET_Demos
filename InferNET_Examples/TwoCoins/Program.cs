@@ -14,15 +14,15 @@ namespace sf.infernet.demos
         private static void Experiment_1()
         {
             // PM erstellen
-            Variable<bool> ersteMünzeKopf = Variable.Bernoulli(0.5);
-            Variable<bool> zweiteMünzeKopf = Variable.Bernoulli(0.5);
-            Variable<bool> beideMünzenKopf = ersteMünzeKopf & zweiteMünzeKopf;
+            Variable<bool> ersteMünzeWurf = Variable.Bernoulli(0.5);
+            Variable<bool> zweiteMünzeWurf = Variable.Bernoulli(0.5);
+            Variable<bool> beideMünzenWurf = ersteMünzeWurf & zweiteMünzeWurf;
             
             // Inferenz-Engine (IE) erstellen
             InferenceEngine engine = new InferenceEngine();
   
             // Inferenz ausführen
-            var ergebnis = engine.Infer<Bernoulli>(beideMünzenKopf);
+            var ergebnis = engine.Infer<Bernoulli>(beideMünzenWurf);
             double beideMünzenZeigenKöpfe = ergebnis.GetProbTrue();
 
 

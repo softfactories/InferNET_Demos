@@ -14,9 +14,9 @@ namespace sf.infernet.demos
         private static void Experiment_2()
         {
             // PM erstellen
-            Variable<bool> ersteMünzeKopf = Variable.Bernoulli(0.5);
-            Variable<bool> zweiteMünzeKopf = Variable.Bernoulli(0.5);
-            Variable<bool> beideMünzenKopf = ersteMünzeKopf & zweiteMünzeKopf;
+            Variable<bool> ersteMünzeWurf = Variable.Bernoulli(0.5);
+            Variable<bool> zweiteMünzeWurf = Variable.Bernoulli(0.5);
+            Variable<bool> beideMünzenWurf = ersteMünzeWurf & zweiteMünzeWurf;
 
             // Inferenz-Engine (IE) erstellen
             InferenceEngine engine = new InferenceEngine();
@@ -25,9 +25,9 @@ namespace sf.infernet.demos
 #endif
 
             // 1. Inferenz ausführen - beide Münzen zeigen Köpfe
-            var ergebnis1 = engine.Infer<Bernoulli>(beideMünzenKopf);
+            var ergebnis1 = engine.Infer<Bernoulli>(beideMünzenWurf);
             double beideMünzenZeigenKöpfe = ergebnis1.GetProbTrue();
-            var ergebnis2 = engine.Infer<Bernoulli>(ersteMünzeKopf);
+            var ergebnis2 = engine.Infer<Bernoulli>(ersteMünzeWurf);
             double ersteMünzeZeigtKopf = ergebnis2.GetProbTrue();
 
             Console.WriteLine("Prior: Beide Münzen zeigen Köpfe: {0}"
@@ -36,14 +36,14 @@ namespace sf.infernet.demos
                 , ersteMünzeZeigtKopf);
 
             // Beobachtung - beide Münzen zeigen Köpfe nicht
-            beideMünzenKopf.ObservedValue = false;
+            beideMünzenWurf.ObservedValue = false;
             Console.WriteLine("\nBeobachtung: beide Münzen zeigen Köpfe = {0}\n"
-                , beideMünzenKopf.ObservedValue);
+                , beideMünzenWurf.ObservedValue);
 
             // 2. Inferenz ausführen - beide Münzen zeigen Köpfe
-            var ergebnis3 = engine.Infer<Bernoulli>(beideMünzenKopf);
+            var ergebnis3 = engine.Infer<Bernoulli>(beideMünzenWurf);
             beideMünzenZeigenKöpfe = ergebnis3.GetProbTrue();
-            var ergebnis4 = engine.Infer<Bernoulli>(ersteMünzeKopf);
+            var ergebnis4 = engine.Infer<Bernoulli>(ersteMünzeWurf);
             ersteMünzeZeigtKopf = ergebnis4.GetProbTrue();
 
             Console.WriteLine("Posterior: P(beide Münzen zeigen Köpfe)={0}", 
