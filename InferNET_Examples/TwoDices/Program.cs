@@ -9,6 +9,7 @@ namespace sf.infernet.demos
         static void Main(string[] args)
         {
             Experiment_2();
+            // Experiment_3();
         }
 
         private static void Experiment_2()
@@ -54,5 +55,29 @@ namespace sf.infernet.demos
             Console.WriteLine("{1}: Beide Würfel zeigen \"6\": {0}" , beideWürfelZeigenSechs, prefix);
             Console.WriteLine("{1}: 1. Würfel zeigt \"6\": {0}", ersterWürfelZeigtSechs, prefix);
         }
+
+        private static void Experiment_3()
+        {
+            // Wahrscheinlichkeit von 6 Würfelaugen ist 1 zu 6 = 1/6 ca 0,17
+            double erfolgWurfel = 0.17;
+            // PM erstellen
+            Variable<bool> ersterWürfelWurf = Variable.Bernoulli(erfolgWurfel);
+            Variable<bool> zweiterWürfelWurf = Variable.Bernoulli(erfolgWurfel);
+            Variable<bool> dritterWürfelWurf = Variable.Bernoulli(erfolgWurfel);
+            Variable<bool> alleWürfelWurf = ersterWürfelWurf & zweiterWürfelWurf & dritterWürfelWurf;
+
+            // Inferenz-Engine (IE) erstellen
+            InferenceEngine engine = new InferenceEngine();
+#if SHOW_MODEL
+            engine.ShowFactorGraph = true; // PM visualisieren
+#endif
+
+            // 1. Inferenz ausführen - beide Münzen zeigen Köpfe
+            Bernoulli ergebnis1 = engine.Infer<Bernoulli>(alleWürfelWurf);
+            double alleWürfelZeigenSechs = ergebnis1.GetProbTrue();
+
+            Console.WriteLine("Die Wahrscheinlichkeit, dass alle Würfel \"6\" zeigen, ist: {0}", alleWürfelZeigenSechs);
+        }
+
     }
 }
