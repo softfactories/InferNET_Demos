@@ -27,7 +27,7 @@ namespace sf.infernet.demos
             engine.ShowFactorGraph = true; // PM visualisieren
 #endif
 
-            // 1. Inferenz ausführen - beide Münzen zeigen Köpfe
+            // 1. Inferenz ausführen - beide Würfel zeigen 6 Augen
             Bernoulli ergebnis1 = engine.Infer<Bernoulli>(beideWürfelWurf);
             double beideWürfelZeigenSechs = ergebnis1.GetProbTrue();
             Bernoulli ergebnis2 = engine.Infer<Bernoulli>(ersterWürfelWurf);
@@ -35,12 +35,12 @@ namespace sf.infernet.demos
 
             showResult("Prior", beideWürfelZeigenSechs, ersterWürfelZeigtSechs);
 
-            // Beobachtung - beide Würfel zeigen keine "6" gleichzeitig
+            // Beobachtung - beide Würfel zeigen niemals "6" gleichzeitig
             beideWürfelWurf.ObservedValue = false;
             Console.WriteLine("\nBeobachtung: beide Würfel zeigen \"6\"={0}\n"
                 , beideWürfelWurf.ObservedValue);
 
-            // 2. Inferenz ausführen - beide Münzen zeigen Köpfe
+            // 2. Inferenz ausführen - beide Würfel zeigen niemals "6" gleichzeitig 
             Bernoulli ergebnis3 = engine.Infer<Bernoulli>(beideWürfelWurf);
             beideWürfelZeigenSechs = ergebnis3.GetProbTrue();
             Bernoulli ergebnis4 = engine.Infer<Bernoulli>(ersterWürfelWurf);
@@ -72,7 +72,7 @@ namespace sf.infernet.demos
             engine.ShowFactorGraph = true; // PM visualisieren
 #endif
 
-            // 1. Inferenz ausführen - beide Münzen zeigen Köpfe
+            // Inferenz ausführen - alle Würfel zeigen 6 Augen
             Bernoulli ergebnis1 = engine.Infer<Bernoulli>(alleWürfelWurf);
             double alleWürfelZeigenSechs = ergebnis1.GetProbTrue();
 
