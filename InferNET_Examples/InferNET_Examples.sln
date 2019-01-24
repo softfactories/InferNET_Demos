@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCoins", "TwoCoins\TwoCoins.csproj", "{F3EF3C0D-5250-482A-81D8-010FA3FA2A50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoDices", "TwoCubesExperiment\TwoDices.csproj", "{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoDices", "TwoDices\TwoDices.csproj", "{CDD94D90-F690-4B44-BF93-E5A5E12C2A2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F3EF3C0D-5250-482A-81D8-010FA3FA2A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3EF3C0D-5250-482A-81D8-010FA3FA2A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3EF3C0D-5250-482A-81D8-010FA3FA2A50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E30277EE-E4C1-4B0D-9F76-96AC0EB0AC48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD94D90-F690-4B44-BF93-E5A5E12C2A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD94D90-F690-4B44-BF93-E5A5E12C2A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD94D90-F690-4B44-BF93-E5A5E12C2A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD94D90-F690-4B44-BF93-E5A5E12C2A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
