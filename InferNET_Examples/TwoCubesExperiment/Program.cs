@@ -27,9 +27,9 @@ namespace sf.infernet.demos
 #endif
 
             // 1. Inferenz ausführen - beide Münzen zeigen Köpfe
-            var ergebnis1 = engine.Infer<Bernoulli>(beideWürfelWurf);
+            Bernoulli ergebnis1 = engine.Infer<Bernoulli>(beideWürfelWurf);
             double beideWürfelZeigenSechs = ergebnis1.GetProbTrue();
-            var ergebnis2 = engine.Infer<Bernoulli>(ersterWürfelWurf);
+            Bernoulli ergebnis2 = engine.Infer<Bernoulli>(ersterWürfelWurf);
             double ersterWürfelZeigtSechs = ergebnis2.GetProbTrue();
 
             showResult("Prior", beideWürfelZeigenSechs, ersterWürfelZeigtSechs);
@@ -40,9 +40,9 @@ namespace sf.infernet.demos
                 , beideWürfelWurf.ObservedValue);
 
             // 2. Inferenz ausführen - beide Münzen zeigen Köpfe
-            var ergebnis3 = engine.Infer<Bernoulli>(beideWürfelWurf);
+            Bernoulli ergebnis3 = engine.Infer<Bernoulli>(beideWürfelWurf);
             beideWürfelZeigenSechs = ergebnis3.GetProbTrue();
-            var ergebnis4 = engine.Infer<Bernoulli>(ersterWürfelWurf);
+            Bernoulli ergebnis4 = engine.Infer<Bernoulli>(ersterWürfelWurf);
             ersterWürfelZeigtSechs = ergebnis4.GetProbTrue();
 
             showResult("Posterior", beideWürfelZeigenSechs, ersterWürfelZeigtSechs);

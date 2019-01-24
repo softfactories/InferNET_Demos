@@ -25,7 +25,7 @@ namespace sf.infernet.demos
 #endif
 
             // Inferenz ausführen
-            var ergebnis = engine.Infer<Bernoulli>(beideMünzenWurf);
+            Bernoulli ergebnis = engine.Infer<Bernoulli>(beideMünzenWurf);
             double beideMünzenZeigenKöpfe = ergebnis.GetProbTrue();
 
 
